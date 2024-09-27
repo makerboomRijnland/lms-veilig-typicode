@@ -27,4 +27,22 @@ class Contact {
     }
 }
 
-const contacts = await Contact.getAll();
+const contactsPromise = Contact.getAll();
+
+function showContactList() {
+    const list = document.getElementById('contact-list');
+    const template = document.getElementById('contact-template');
+
+    contactsPromise.then(contacts => {
+        for(const contact of contacts) {
+            const element = template.content.cloneNode(true);
+            element.querySelector('.name').innerHTML = contact.name;
+            element.querySelector('.phone').innerHTML = contact.phone;
+            element.querySelector('.phone').href = `tel:${contact.phone}`;
+            list.appendChild(element);
+        }
+    });
+    
+}
+
+showContactList();
