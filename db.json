@@ -1,0 +1,35 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Jan",
+            "phone": "0612345678",
+            "email": "jan@mborijnland.nl"
+        },
+        {
+            "id": 2,
+            "name": "Piet",
+            "phone": "0612345678",
+            "email": "piet@mborijnland.nl"
+        }
+    ],
+
+    "incidents": [
+        {
+            "id": 1,
+            "date": "2021-01-01",
+            "time": "12:00",
+            "reportedBy": 2,
+            "description": "Er is een ernstig incident",
+            "severity": 4
+        },
+        {
+            "id": 2,
+            "date": "2021-01-02",
+            "time": "13:00",
+            "reportedBy": 1,
+            "description": "Er is een minder ernstig incident",
+            "severity": 2
+        }
+    ]
+}
